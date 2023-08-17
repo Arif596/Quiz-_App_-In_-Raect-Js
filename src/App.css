@@ -1,0 +1,142 @@
+.app {
+  display: flex;
+  height: 100vh;
+  background-color: #020230;
+  color: white;
+}
+.main {
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url("./assets/bg.jpg") center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  height: 50%;
+  position: relative;
+}
+.bottom {
+  height: 50%;
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+
+}
+.mainco {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.question {
+  width: 60%;
+  border: 2px solid white;
+  background: linear-gradient(#100241, black);
+  border-radius: 1px;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+.answers {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0px 10px 20px 10px;
+  cursor: pointer;
+}
+.answer:hover,.answer.active{
+  background: mediumblue;
+}
+.answer.correct{
+animation: correct 3s ease forwards;
+}
+@keyframes correct {
+  0%, 22%, 42% {
+    background: mediumblue;
+  }
+  20% ,60%{
+    background: linear-gradient(#100241, black);
+  }
+  62% ,90%{
+    background: green;
+  }
+  91% ,100%{
+    background: rgb(251, 255, 0);
+  }
+}
+.answer.wrong{
+  animation: wrong 3s ease forwards;
+  }
+  @keyframes wrong {
+    0%, 22%, 42% {
+      background: rgb(205, 0, 34);
+    }
+    20% ,60%{
+      background: linear-gradient(#100241,red);
+    }
+  }
+.answer {
+  width: 40%;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(#000124, #22074d);
+  font-weight: 300;
+}
+.pyramid {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.moneylist {
+  width: 100%;
+  list-style: none;
+  padding: 20px;
+}
+.listitemnum {
+  font-size: 20px;
+  font-weight: 100;
+  width: 30%;
+}
+.listitemamount {
+  font-size: 20px;
+  font-weight: 300;
+}
+.listmoneyitem.active {
+  background-color: rgb(26, 165, 165);
+}
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.listmoneyitem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+.earning{
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-size: 80px;
+  color:white;
+}
